@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7f48dae0-67f0-45a8-a3d7-f0ee3e425cb4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/HashTableTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HashTableTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/CoverletSourceRootsMapping_HashTabletests" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/CoverletSourceRootsMapping_HashTabletests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/HashTabletests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/HashTabletests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/HashTabletests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/HashTabletests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lab_4_Hashtables.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lab_4_Hashtables.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lab_4_Hashtables.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/HashTabletests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/HashTabletests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/HashTabletests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/HashTabletests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/HashTabletests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/MyHashTableArray.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/MyHashTableArray.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/MyHashTableLinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/MyHashTableLinkedList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/MyHashTableList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/MyHashTableList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/bin/Debug/net8.0/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/bin/Debug/net8.0/Lab_4_Hashtables.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/bin/Debug/net8.0/Lab_4_Hashtables.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/bin/Debug/net8.0/Lab_4_Hashtables.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/ref/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/ref/Lab_4_Hashtables.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/refint/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTables/obj/Debug/net8.0/refint/Lab_4_Hashtables.dll" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2fluNUqVfgzb6ep3szt89ub5hKL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortKey" value="BY_TIME_DESCENDING" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/home/zatanic/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/home/zatanic/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/home/zatanic/.local/share/Symbols/src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f48dae0-67f0-45a8-a3d7-f0ee3e425cb4" name="Changes" comment="" />
+      <created>1714387945550</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714387945550</updated>
+      <workItem from="1714387946639" duration="24415000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
