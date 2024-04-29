@@ -1,5 +1,3 @@
-using System;
-using Xunit;
 namespace Lab_4_HashTable
 {
     public class HashTableTests : IDisposable
