@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lab_4_Hashtables")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+145c9bb13e60adba21345348c13dda4ed1800ce7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23b9fa09282bad984af87ad5627a27e2f63ee5ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lab_4_Hashtables")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lab_4_Hashtables")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
