@@ -1,123 +1,99 @@
-using System;
-using System.Collections.Generic;
-
 namespace Lab_4_HashTable
 {
     public class MyHashTableArray : IHashTable
     {
-        private const float LoadFactorThreshold = 0.8f; // Load factor threshold set to 80%
-        private const int InitialCapacity = 16;
-
+        private const float LoadFactorThreshold = 0.75f;
         private KeyValuePair<string, Student>[] buckets;
-        private readonly object lockObject = new object(); // Lock object for synchronization
-        public int Count { get; private set; }
-
-        public MyHashTableArray()
+        private int count;
+        public MyHashTableArray(int initialCapacity)
         {
-            buckets = new KeyValuePair<string, Student>[InitialCapacity];
+            if (initialCapacity <= 0)
+            {
+                throw new ArgumentException("Initial capacity must be greater than zero.", nameof(initialCapacity));
+            }
+            buckets = new KeyValuePair<string, Student>[initialCapacity];
         }
+        public int Count => count;
 
         public int GetCapacity()
         {
             return buckets.Length;
         }
-
+        private int QuadraticProbe(int startIndex, int attempt)
+        {
+            return (startIndex + (attempt * attempt)) % buckets.Length;
+        }
         public void Add(string key, Student value)
         {
-            if (string.IsNullOrEmpty(key))
-                throw new ArgumentException("Key cannot be null or empty.");
-
-            // Check load factor
-            if ((float)Count / buckets.Length >= 0.5f)
-            {
-                Resize();
-            }
-
             int index = GetIndex(key);
+            int attempt = 0;
             int startIndex = index;
-            int attempt = 1;
-
             do
             {
-                if (buckets[index].Key == null || buckets[index].Key == key)
+                if (buckets[index].Key == null)
                 {
                     buckets[index] = new KeyValuePair<string, Student>(key, value);
-                    Count++;
+                    count++;
+                    Console.WriteLine($"Added element: {key}. Count: {count}, Capacity: {buckets.Length}, Load Factor: {(float)count / buckets.Length}");
+                    if ((float)(count + 1) / buckets.Length >= LoadFactorThreshold)
+                    {
+                        Console.WriteLine("Resizing quadratically...");
+                        ResizeQuadratically();
+                        Console.WriteLine($"New Capacity after quadratic resizing: {buckets.Length}");
+                        index = GetIndex(key);
+                        startIndex = index;
+                        attempt = 0;
+                    }
                     return;
                 }
-
-                // Quadratic probing
-                index = (startIndex + attempt * attempt) % buckets.Length;
-                attempt++;
+                index = QuadraticProbe(startIndex, ++attempt);
             } while (index != startIndex);
-
             throw new InvalidOperationException("Hash table is full. Cannot add.");
         }
-        public Student Get(string key)
-        {
-            if (string.IsNullOrEmpty(key))
-                throw new ArgumentException("Key cannot be null or empty.");
-
-            lock (lockObject) // Lock to ensure thread safety
-            {
-                int index = GetIndex(key);
-                return buckets[index].Key == key ? buckets[index].Value : null;
-            }
-        }
-
-        public void Remove(string key)
-        {
-            if (string.IsNullOrEmpty(key))
-                throw new ArgumentException("Key cannot be null or empty.");
-
-            lock (lockObject) // Lock to ensure thread safety
-            {
-                int index = GetIndex(key);
-                if (buckets[index].Key == key)
-                {
-                    buckets[index] = new KeyValuePair<string, Student>();
-                    Count--;
-                    return;
-                }
-            }
-
-            throw new KeyNotFoundException($"Key '{key}' not found.");
-        }
-
-        private int GetIndex(string key)
-        {
-            // Simple hash function to calculate index
-            return Math.Abs(key.GetHashCode() % buckets.Length);
-        }
-
-        public void Resize()
+        public void ResizeQuadratically()
         {
             int newCapacity = buckets.Length * 2;
             var oldBuckets = buckets;
             buckets = new KeyValuePair<string, Student>[newCapacity];
-            Count = 0; // Reset Count before rehashing
-
+            count = 0;
             foreach (var bucket in oldBuckets)
             {
                 if (bucket.Key != null)
                 {
                     int index = GetIndex(bucket.Key);
-                    buckets[index] = new KeyValuePair<string, Student>(bucket.Key, bucket.Value);
-                    Count++;
+                    buckets[index] = bucket;
+                    count++;
                 }
             }
         }
+
+        public Student Get(string key)
+        {
+            int index = GetIndex(key);
+            return buckets[index].Key == key ? buckets[index].Value : null;
+        }
+
+        public void Remove(string key)
+        {
+            int index = GetIndex(key);
+            buckets[index] = default;
+            count--;
+        }
+
+        private int GetIndex(string key)
+        {
+            if (buckets.Length == 0)
+            {
+                throw new InvalidOperationException("Hash table has zero capacity. Cannot calculate index.");
+            }
+
+            int hashCode = key.GetHashCode();
+            return Math.Abs(hashCode) % buckets.Length;
+        }
         public void Clear()
         {
-            lock (lockObject) // Lock to ensure thread safety
-            {
-                for (int i = 0; i < buckets.Length; i++)
-                {
-                    buckets[i] = default; // Reset each bucket to default value
-                }
-                Count = 0;
-                Console.WriteLine("Hash table cleared.");
-            }
+            Array.Clear(buckets, 0, buckets.Length);
+            count = 0;
         }
     }
 }
