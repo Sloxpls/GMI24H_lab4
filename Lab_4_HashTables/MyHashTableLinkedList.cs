@@ -4,38 +4,50 @@ public class MyHashTableLinkedList : IHashTable
         public string Key { get; set; }
         public object Value { get; set; }
         public Node Next { get; set; }
+
         public Node(string key, object value) {
             Key = key;
             Value = value;
         }
     }
 
-    private readonly int size;
     private Node[] buckets;
+    private int size;
 
-    public MyHashTableLinkedList(int size = 100) {
+    public MyHashTableLinkedList(int size = 100){
         this.size = size;
         buckets = new Node[size];
     }
 
+    private static ulong Djb2(string str) {
+        ulong hash = 5381; 
+        foreach (char c in str) {
+            hash = ((hash << 5) + hash) + c; 
+        }
+        return hash;
+    }
+
     private int GetIndex(string key) {
-        int hash = key.GetHashCode();
-        return Math.Abs(hash % size);
+        ulong hash = Djb2(key);
+        return (int)(hash % (ulong)size);
     }
 
     public void Add(string key, object value) {
         int index = GetIndex(key);
         Node head = buckets[index];
 
-        while (head != null) {
+        // Check if key exists and update value
+        while (head != null)
+        {
             if (head.Key.Equals(key))
             {
-                head.Value = value; // Update existing key
+                head.Value = value;
                 return;
             }
             head = head.Next;
         }
 
+        // Insert new node at the head of the list in the bucket
         Node newNode = new Node(key, value);
         newNode.Next = buckets[index];
         buckets[index] = newNode;
@@ -54,7 +66,7 @@ public class MyHashTableLinkedList : IHashTable
             head = head.Next;
         }
 
-        return null;
+        return null; // Key not found
     }
 
     public void Remove(string key) {
@@ -68,11 +80,11 @@ public class MyHashTableLinkedList : IHashTable
             {
                 if (prev != null)
                 {
-                    prev.Next = head.Next;
+                    prev.Next = head.Next; // Bypass the node
                 }
                 else
                 {
-                    buckets[index] = head.Next;
+                    buckets[index] = head.Next; // Remove head node
                 }
                 return;
             }

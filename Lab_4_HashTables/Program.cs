@@ -1,27 +1,57 @@
 ﻿using Lab_4_HashTable;
 
-class Program
-{
-    public static void Main(string[] args) {
-        Student student1 = new Student("1", "Jim");
-        Student student2 = new Student("2", "Z-tanic");
-        Student student3 = new Student("3", "Ola");
+class Program {
+    static void Main(string[] args) {
+        IHashTable hashTable = new MyHashTableLinkedList(); 
 
-        IHashTable hashTableLinkedList = new MyHashTableLinkedList();
-        hashTableLinkedList.Add(student1.studentId, student1);
-        hashTableLinkedList.Add(student2.studentId, student2);
-        hashTableLinkedList.Add(student3.studentId, student3);
+        while (true) {
+            Console.WriteLine("\nHash Table Operations:");
+            Console.WriteLine("1. Add Key-Value");
+            Console.WriteLine("2. Get Value by Key");
+            Console.WriteLine("3. Remove Key");
+            Console.WriteLine("4. Exit");
+            Console.Write("Select an option: ");
 
-        var testStudent = (Student)hashTableLinkedList.Get(student3.studentId);
-        if (testStudent != null) {
-            Console.WriteLine(testStudent.name);  
+            int option = Convert.ToInt32(Console.ReadLine());
+
+            switch (option) {
+                case 1:
+                    Console.Write("Enter key: ");
+                    string keyToAdd = Console.ReadLine();
+                    
+                    Console.Write("Enter student id: ");
+                    string studentID = Console.ReadLine();
+                    Console.Write("Enter student name: ");
+                    string studentName = Console.ReadLine();
+                    Student valueToAdd = new Student(studentID, studentName);
+                    
+                    hashTable.Add(keyToAdd, valueToAdd);
+                    Console.WriteLine("Added successfully.");
+                    break;
+                
+                case 2:
+                    Console.Write("Enter key to retrieve: ");
+                    string keyToGet = Console.ReadLine();
+                    var value = hashTable.Get(keyToGet);
+                    if (value != null)
+                        Console.WriteLine($"Value: {value}");
+                    else
+                        Console.WriteLine("Key not found.");
+                    break;
+                
+                case 3:
+                    Console.Write("Enter key to remove: ");
+                    string keyToRemove = Console.ReadLine();
+                    hashTable.Remove(keyToRemove);
+                    Console.WriteLine("Removed successfully.");
+                    break;
+
+                case 4:
+                    return; // Exit the program
+                default:
+                    Console.WriteLine("Invalid option, try again.");
+                    break;
+            }
         }
-        else {
-            Console.WriteLine("Student not found.");
-        }
-
-
-
-
     }
 }
