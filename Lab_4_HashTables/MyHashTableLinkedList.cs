@@ -1,17 +1,37 @@
+using System;
+using System.Collections.Generic;
+
 namespace Lab_4_HashTable
 {
     public class MyHashTableLinkedList : IHashTable
     {
+        public MyHashTableLinkedList() : this(100) { }
+        
         private LinkedList<KeyValuePair<string, Student>>[] buckets;
         private int capacity;
-        private int Count;
         private const float LoadFactorThreshold = 0.8f;
         private const int IncrementAmount = 10;
+
         public MyHashTableLinkedList(int size)
         {
             buckets = new LinkedList<KeyValuePair<string, Student>>[size];
             capacity = size;
-            Count = 0;
+        }
+
+        public int Count
+        {
+            get
+            {
+                int count = 0;
+                foreach (var bucket in buckets)
+                {
+                    if (bucket != null)
+                    {
+                        count += bucket.Count;
+                    }
+                }
+                return count;
+            }
         }
 
         public void Add(string key, Student value)
@@ -26,8 +46,8 @@ namespace Lab_4_HashTable
                 buckets[index] = new LinkedList<KeyValuePair<string, Student>>();
 
             buckets[index].AddLast(new KeyValuePair<string, Student>(key, value));
-            Count++;
         }
+
         public Student Get(string key)
         {
             int index = GetIndex(key);
@@ -43,10 +63,7 @@ namespace Lab_4_HashTable
             }
             return null;
         }
-        public int GetCapacity()
-        {
-            return capacity;
-        }
+        
         public void Remove(string key)
         {
             int index = GetIndex(key);
@@ -67,20 +84,26 @@ namespace Lab_4_HashTable
                 }
             }
         }
-        private int GetIndex(string key)
+
+        public IEnumerable<KeyValuePair<string, Student>> GetAllPairs()
         {
-            return Math.Abs(DJB2Hash(key) % buckets.Length);
+            foreach (var bucket in buckets)
+            {
+                if (bucket != null)
+                {
+                    foreach (var pair in bucket)
+                    {
+                        yield return pair;
+                    }
+                }
+            }
         }
 
-        private int DJB2Hash(string key)
+        public int GetIndex(string key)
         {
-            uint hash = 5381;
-            foreach (char c in key)
-            {
-                hash = ((hash << 5) + hash) + c;
-            }
-
-            return (int)(hash % buckets.Length);
+            // Implement your own hash function here
+            // For demonstration purposes, a simple mod function is used
+            return Math.Abs(key.GetHashCode()) % buckets.Length;
         }
 
         public void Clear()
@@ -91,6 +114,7 @@ namespace Lab_4_HashTable
                     buckets[i].Clear();
             }
         }
+
         private void ResizeIncremental()
         {
             int newCapacity = capacity + IncrementAmount;

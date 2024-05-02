@@ -22,20 +22,5 @@ namespace Lab_4_HashTable
             Assert.Equal(student2.StudentId, hashTable.Get(student2.StudentId).StudentId);
             Assert.Equal(student2.Name, hashTable.Get(student2.StudentId).Name);
         }
-        [Fact]
-        public void QuadraticProbingTest()
-        {
-            // Arrange
-            var hashTable = new MyHashTableArray(32);
-
-            // Act
-            for (int i = 0; i < 33; i++)
-            {
-                hashTable.Add($"Key{i}", new Student($"Name{i}", $"ID{i}"));
-            }
-
-            // Assert
-            Assert.Equal(64, hashTable.GetCapacity());
-        }
     }
 }

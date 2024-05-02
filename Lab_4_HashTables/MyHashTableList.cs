@@ -1,10 +1,14 @@
+using System;
+using System.Collections.Generic;
+
 namespace Lab_4_HashTable
 {
     public class MyHashTableList : IHashTable
     {
+        public MyHashTableList() : this(100) { }
+        
         private List<KeyValuePair<string, Student>>[] buckets;
         private int capacity;
-        private int Count;
         private const float LoadFactorThreshold = 0.8f;
         private const double GrowthFactor = 1.5;
 
@@ -12,19 +16,26 @@ namespace Lab_4_HashTable
         {
             buckets = new List<KeyValuePair<string, Student>>[size];
             capacity = size;
-            Count = 0;
         }
-        private int LinearProbe(int startIndex, int attempt)
+
+        public int Count
         {
-            return (startIndex + attempt) % buckets.Length;
+            get
+            {
+                int count = 0;
+                foreach (var bucket in buckets)
+                {
+                    if (bucket != null)
+                    {
+                        count += bucket.Count;
+                    }
+                }
+                return count;
+            }
         }
+
         public void Add(string key, Student value)
         {
-            if (key == null)
-            {
-                throw new ArgumentNullException(nameof(key));
-            }
-
             if ((float)Count / capacity >= LoadFactorThreshold)
             {
                 ResizeGeometric();
@@ -48,10 +59,8 @@ namespace Lab_4_HashTable
                         buckets[index] = new List<KeyValuePair<string, Student>>();
                     }
                     buckets[index].Add(new KeyValuePair<string, Student>(key, value));
-                    Count++; // Increment Count
                     return;
                 }
-
 
                 // Linear probing
                 index = LinearProbe(startIndex, ++attempt);
@@ -59,6 +68,7 @@ namespace Lab_4_HashTable
 
             throw new InvalidOperationException("Hash table is full. Cannot add.");
         }
+
         public Student Get(string key)
         {
             int index = GetIndex(key);
@@ -74,10 +84,6 @@ namespace Lab_4_HashTable
             }
 
             return null;
-        }
-        public int GetCapacity()
-        {
-            return capacity;
         }
 
         public void Remove(string key)
@@ -101,33 +107,26 @@ namespace Lab_4_HashTable
                     buckets[i].Clear();
             }
         }
-        private int FNV1aHash(string key)
+
+        public IEnumerable<KeyValuePair<string, Student>> GetAllPairs()
         {
-            unchecked
+            foreach (var bucket in buckets)
             {
-                const uint FnvPrime = 16777619;
-                const uint FnvOffsetBasis = 2166136261;
-
-                uint hash = FnvOffsetBasis;
-                foreach (char c in key)
+                if (bucket != null)
                 {
-                    hash ^= c;
-                    hash *= FnvPrime;
+                    foreach (var pair in bucket)
+                    {
+                        yield return pair;
+                    }
                 }
-
-                return (int)(hash % buckets.Length);
             }
         }
-        private int GetIndex(string key)
-        {
-            return FNV1aHash(key);
-        }
+
         private void ResizeGeometric()
         {
             int newCapacity = (int)(capacity * GrowthFactor);
             Console.WriteLine($"New capacity before adjustment: {newCapacity}");
 
-           
             if (newCapacity % 2 != 0)
             {
                 newCapacity++;
@@ -155,8 +154,16 @@ namespace Lab_4_HashTable
             Console.WriteLine($"Capacity after resize: {capacity}");
         }
 
+        public int GetIndex(string key)
+        {
+            // Implement your own hash function here
+            // For demonstration purposes, a simple mod function is used
+            return Math.Abs(key.GetHashCode()) % buckets.Length;
+        }
 
-
-
+        private int LinearProbe(int startIndex, int attempt)
+        {
+            return (startIndex + attempt) % buckets.Length;
+        }
     }
 }
