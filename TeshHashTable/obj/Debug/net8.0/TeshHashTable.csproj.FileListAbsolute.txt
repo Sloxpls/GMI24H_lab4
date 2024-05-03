@@ -1,0 +1,15 @@
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\bin\Debug\net8.0\TeshHashTable.exe
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\bin\Debug\net8.0\TeshHashTable.deps.json
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\bin\Debug\net8.0\TeshHashTable.runtimeconfig.json
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\bin\Debug\net8.0\TeshHashTable.dll
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\bin\Debug\net8.0\TeshHashTable.pdb
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\TeshHashTable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\TeshHashTable.AssemblyInfoInputs.cache
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\TeshHashTable.AssemblyInfo.cs
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\TeshHashTable.csproj.CoreCompileInputs.cache
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\TeshHashTable.sourcelink.json
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\TeshHashTable.dll
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\refint\TeshHashTable.dll
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\TeshHashTable.pdb
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\TeshHashTable.genruntimeconfig.cache
+C:\Users\jimsj\Desktop\skola\alg\alg_lab4\TeshHashTable\obj\Debug\net8.0\ref\TeshHashTable.dll
