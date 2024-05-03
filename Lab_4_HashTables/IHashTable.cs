@@ -1,7 +1,6 @@
-using Lab_4_HashTable;
-
-public interface IHashTable {
-    void Add(string key, object value);
-    object Get(string key);
-    void Remove(string key);
+namespace hashtable_inlämning;
+public interface IHashTable<TKey, TValue> {
+    void Add(TKey key, TValue value);
+    TValue Get(TKey key);
+    void Remove(TKey key);
 }

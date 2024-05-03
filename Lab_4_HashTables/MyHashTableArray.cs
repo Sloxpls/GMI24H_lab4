@@ -1,100 +1,89 @@
-/*
-using Lab_4_HashTable;
-public class MyHashTableArray : IHashTable
-{
-    private const float LoadFactorThreshold = 0.75f;
-    private KeyValuePair<string, Student>[] buckets;
-    private int count;
-    public MyHashTableArray(int initialCapacity)
-    {
-        if (initialCapacity <= 0)
-        {
-            throw new ArgumentException("Initial capacity must be greater than zero.", nameof(initialCapacity));
-        }
-        buckets = new KeyValuePair<string, Student>[initialCapacity];
-    }
-    public int Count => count;
+namespace hashtable_inlämning;
 
-    public int GetCapacity()
-    {
-        return buckets.Length;
+public class MyHashTableArray<TKey, TValue> : IHashTable<TKey, TValue> {
+    private KeyValuePair<TKey, TValue>?[] buckets; // ? används för att säga att elementen kan vara null
+    private int size;
+    private const double LoadFactorThreshold = 0.75;
+    private const int InitialCapacity = 10;
+
+    // construktor som skapar en ny hash tabell med en initial kapacitet på 10
+    public MyHashTableArray() {
+        buckets = new KeyValuePair<TKey, TValue>?[InitialCapacity];
+        size = 0;
     }
-    private int QuadraticProbe(int startIndex, int attempt)
-    {
-        return (startIndex + (attempt * attempt)) % buckets.Length;
+
+    // lägger till ett nyckel värde par i hashtabellen om nyckeln redan finns kastas ett undantag
+    public void Add(TKey key, TValue value) {
+        if ((double)size / buckets.Length >= LoadFactorThreshold) {
+            Resize();// utöka storleken på arrayen vid behov
+        }
+
+        int index = GetBucketIndex(key);
+        while (buckets[index] != null) {
+            if (buckets[index].Value.Key.Equals(key)) {
+                throw new ArgumentException("An element with the same key already exists.");
+            }
+            index = (index + 1) % buckets.Length; //linear probing
+        }
+
+        buckets[index] = new KeyValuePair<TKey, TValue>(key, value);
+        size++;
     }
-    public void Add(string key, Student value)
-    {
-        int index = GetIndex(key);
-        int attempt = 0;
-        int startIndex = index;
-        do
-        {
-            if (buckets[index].Key == null)
-            {
-                buckets[index] = new KeyValuePair<string, Student>(key, value);
-                count++;
-                Console.WriteLine($"Added element: {key}. Count: {count}, Capacity: {buckets.Length}, Load Factor: {(float)count / buckets.Length}");
-                if ((float)(count + 1) / buckets.Length >= LoadFactorThreshold)
-                {
-                    Console.WriteLine("Resizing quadratically...");
-                    ResizeQuadratically();
-                    Console.WriteLine($"New Capacity after quadratic resizing: {buckets.Length}");
-                    index = GetIndex(key);
-                    startIndex = index;
-                    attempt = 0;
+    // hämtar värde baserat på nyckeln, kastar exception om nyckeln inte hittas
+    public TValue Get(TKey key) {
+        int index = GetBucketIndex(key);
+        while (buckets[index] != null) {
+            if (buckets[index].Value.Key.Equals(key)) {
+                return buckets[index].Value.Value;
+            }
+            index = (index + 1) % buckets.Length; 
+        }
+
+        throw new KeyNotFoundException("Key not found.");
+    }
+//radera ett element baserat på nyckel och gör omhashning av efterföljande element
+// så inget index lämnas tom och den slutar leta
+    public void Remove(TKey key) {
+        int index = GetBucketIndex(key);
+        while (buckets[index] != null) {
+            if (buckets[index].Value.Key.Equals(key)) {
+                buckets[index] = null; 
+                size--;
+                int nextIndex = (index + 1) % buckets.Length;
+                while (buckets[nextIndex] != null) {
+                    var rehashedKey = buckets[nextIndex].Value.Key;
+                    var rehashedValue = buckets[nextIndex].Value.Value;
+                    buckets[nextIndex] = null;
+                    size--;
+                    Add(rehashedKey, rehashedValue);
+                    nextIndex = (nextIndex + 1) % buckets.Length;
                 }
                 return;
             }
-            index = QuadraticProbe(startIndex, ++attempt);
-        } while (index != startIndex);
-        throw new InvalidOperationException("Hash table is full. Cannot add.");
+            index = (index + 1) % buckets.Length;
+        }
+
+        throw new KeyNotFoundException("Key not found.");
     }
-    public void ResizeQuadratically()
-    {
+
+    private void Resize() {
         int newCapacity = buckets.Length * 2;
-        var oldBuckets = buckets;
-        buckets = new KeyValuePair<string, Student>[newCapacity];
-        count = 0;
-        foreach (var bucket in oldBuckets)
-        {
-            if (bucket.Key != null)
-            {
-                int index = GetIndex(bucket.Key);
-                buckets[index] = bucket;
-                count++;
+        var newBuckets = new KeyValuePair<TKey, TValue>?[newCapacity];
+        size = 0; // Reset size to re-add elements correctly without duplicating
+
+        foreach (var bucket in buckets) {
+            if (bucket != null) {
+                Add(bucket.Value.Key, bucket.Value.Value);
             }
         }
+        buckets = newBuckets;
     }
-
-    public Student Get(string key)
-    {
-        int index = GetIndex(key);
-        return buckets[index].Key == key ? buckets[index].Value : null;
-    }
-
-    public void Remove(string key)
-    {
-        int index = GetIndex(key);
-        buckets[index] = default;
-        count--;
-    }
-
-    private int GetIndex(string key)
-    {
-        if (buckets.Length == 0)
-        {
-            throw new InvalidOperationException("Hash table has zero capacity. Cannot calculate index.");
-        }
-
-        int hashCode = key.GetHashCode();
-        return Math.Abs(hashCode) % buckets.Length;
-    }
-    public void Clear()
-    {
-        Array.Clear(buckets, 0, buckets.Length);
-        count = 0;
+    
+  
+    // hash funktion använder sig av modulo eller rest för att få index
+    private int GetBucketIndex(TKey key, int capacity = -1) {
+        int hash = key.GetHashCode();
+        if (capacity == -1) capacity = buckets.Length;
+        return Math.Abs(hash % capacity);
     }
 }
-*/
-

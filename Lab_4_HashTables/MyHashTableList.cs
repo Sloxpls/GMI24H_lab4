@@ -1,162 +1,102 @@
-/*
-using Lab_4_HashTable;
-public class MyHashTableList : IHashTable
-{
-    private List<KeyValuePair<string, Student>>[] buckets;
-    private int capacity;
-    private int Count;
-    private const float LoadFactorThreshold = 0.8f;
-    private const double GrowthFactor = 1.5;
+namespace hashtable_inlämning;
 
-    public MyHashTableList(int size)
-    {
-        buckets = new List<KeyValuePair<string, Student>>[size];
-        capacity = size;
-        Count = 0;
+public class MyHashTableList<TKey, TValue> : IHashTable<TKey, TValue> {
+    private KeyValuePair<TKey, TValue>?[] buckets; // ? används för att säga att det ej får vara null
+    private int size;
+    private const double LoadFactorThreshold = 0.75;
+    private const int InitialCapacity = 10;
+
+    public MyHashTableList() {
+        buckets = new KeyValuePair<TKey, TValue>?[InitialCapacity];
+        size = 0;
     }
-    private int LinearProbe(int startIndex, int attempt)
-    {
-        return (startIndex + attempt) % buckets.Length;
+    public void Add(TKey key, TValue value) {
+        EnsureCapacity();
+        int index = GetBucketIndex(key);
+        int attempt = 1;
+
+        while (buckets[index] != null && !buckets[index].Value.Key.Equals(key)) {
+            index = (index + attempt * attempt) % buckets.Length; // Quadratic probing
+            attempt++;
+        }
+
+        if (buckets[index] != null && buckets[index].Value.Key.Equals(key))
+        {
+            throw new ArgumentException("An element with the same key already exists.");
+        }
+
+        buckets[index] = new KeyValuePair<TKey, TValue>(key, value);
+        size++;
     }
-    public void Add(string key, Student value)
-    {
-        if (key == null)
-        {
-            throw new ArgumentNullException(nameof(key));
-        }
+    public TValue Get(TKey key) {
+        int index = GetBucketIndex(key);
+        int attempt = 1;
 
-        if ((float)Count / capacity >= LoadFactorThreshold)
+        while (buckets[index] != null)
         {
-            ResizeGeometric();
-        }
-
-        int index = GetIndex(key);
-        if (buckets[index] == null)
-        {
-            buckets[index] = new List<KeyValuePair<string, Student>>();
-        }
-
-        int attempt = 0;
-        int startIndex = index;
-
-        do
-        {
-            if (buckets[index] == null || buckets[index].Count == 0 || buckets[index][0].Key == key)
+            if (buckets[index].Value.Key.Equals(key))
             {
-                if (buckets[index] == null)
-                {
-                    buckets[index] = new List<KeyValuePair<string, Student>>();
-                }
-                buckets[index].Add(new KeyValuePair<string, Student>(key, value));
-                Count++; // Increment Count
+                return buckets[index].Value.Value;
+            }
+            index = (index + attempt * attempt) % buckets.Length; // Quadratic probing
+            attempt++;
+        }
+
+        throw new KeyNotFoundException("Key not found.");
+    }
+    public void Remove(TKey key) {
+        int index = GetBucketIndex(key);
+        int attempt = 1;
+
+        while (buckets[index] != null)
+        {
+            if (buckets[index].Value.Key.Equals(key))
+            {
+                buckets[index] = null; 
+                size--;
+                HandleRehashing(index);
                 return;
             }
+            index = (index + attempt * attempt) % buckets.Length;
+            attempt++;
+        }
 
-
-            // Linear probing
-            index = LinearProbe(startIndex, ++attempt);
-        } while (index != startIndex);
-
-        throw new InvalidOperationException("Hash table is full. Cannot add.");
+        throw new KeyNotFoundException("Key not found.");
     }
-    public T Get(string key)
-    {
-        int index = GetIndex(key);
-        var bucket = buckets[index];
+    private void Resize() {
+        int newCapacity = buckets.Length * 2;
+        var newBuckets = new KeyValuePair<TKey, TValue>?[newCapacity];
+        size = 0; 
 
-        if (bucket != null)
+        foreach (var bucket in buckets)
         {
-            foreach (var pair in bucket)
+            if (bucket != null)
             {
-                if (pair.Key == key)
-                    return pair.Value;
-            }
-        }
-
-        return null;
-    }
-    public int GetCapacity()
-    {
-        return capacity;
-    }
-
-    public void Remove(string key)
-    {
-        int index = GetIndex(key);
-        var bucket = buckets[index];
-
-        if (bucket != null)
-        {
-            var item = bucket.Find(kvp => kvp.Key == key);
-            if (item.Key == key)
-                bucket.Remove(item);
-        }
-    }
-
-    public void Clear()
-    {
-        for (int i = 0; i < buckets.Length; i++)
-        {
-            if (buckets[i] != null)
-                buckets[i].Clear();
-        }
-    }
-    private int FNV1aHash(string key)
-    {
-        unchecked
-        {
-            const uint FnvPrime = 16777619;
-            const uint FnvOffsetBasis = 2166136261;
-
-            uint hash = FnvOffsetBasis;
-            foreach (char c in key)
-            {
-                hash ^= c;
-                hash *= FnvPrime;
-            }
-
-            return (int)(hash % buckets.Length);
-        }
-    }
-    private int GetIndex(string key)
-    {
-        return FNV1aHash(key);
-    }
-    private void ResizeGeometric()
-    {
-        int newCapacity = (int)(capacity * GrowthFactor);
-        Console.WriteLine($"New capacity before adjustment: {newCapacity}");
-
-       
-        if (newCapacity % 2 != 0)
-        {
-            newCapacity++;
-            Console.WriteLine($"Adjusted new capacity to ensure it's even: {newCapacity}");
-        }
-
-        var newBuckets = new List<KeyValuePair<string, Student>>[newCapacity];
-
-        foreach (var bucket in buckets.Where(b => b != null))
-        {
-            foreach (var pair in bucket)
-            {
-                int newIndex = GetIndex(pair.Key);
-                if (newBuckets[newIndex] == null)
-                {
-                    newBuckets[newIndex] = new List<KeyValuePair<string, Student>>();
-                }
-
-                newBuckets[newIndex].Add(pair);
+                Add(bucket.Value.Key, bucket.Value.Value);
             }
         }
 
         buckets = newBuckets;
-        capacity = newCapacity;
-        Console.WriteLine($"Capacity after resize: {capacity}");
     }
-
-
-
-
+    private void EnsureCapacity() {
+        if ((double)size / buckets.Length >= LoadFactorThreshold) {
+            Resize();
+        }
+    }
+    private void HandleRehashing(int startIndex) {
+        int index = (startIndex + 1) % buckets.Length;
+        while (buckets[index] != null) {
+            var rehashedKey = buckets[index].Value.Key;
+            var rehashedValue = buckets[index].Value.Value;
+            buckets[index] = null;
+            size--;
+            Add(rehashedKey, rehashedValue);
+            index = (index + 1) % buckets.Length;
+        }
+    }
+    private int GetBucketIndex(TKey key) {
+        int hash = key.GetHashCode();
+        hash ^= (hash << 13) ^ (hash >> 17);
+        return Math.Abs(hash % buckets.Length);
+    }
 }
-*/
