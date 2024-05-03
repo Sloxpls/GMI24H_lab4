@@ -18,12 +18,23 @@ public class MyHashTableArray<TKey, TValue> : IHashTable<TKey, TValue> {
         }
 
         int index = GetBucketIndex(key);
-        while (buckets[index] != null) {
-            if (buckets[index].Value.Key.Equals(key)) {
-                throw new ArgumentException("An element with the same key already exists.");
-            }
-            index = (index + 1) % buckets.Length; //linear probing
-        }
+	while (buckets[index] != null) {
+	    try
+	    {
+		if (buckets[index].Value.Key.Equals(key)) {
+		    throw new ArgumentException("An element with the same key already exists.");
+		}
+	    }
+	    catch (ArgumentException ex)
+	    {
+		// Handle the exception gracefully (e.g., log it)
+		Console.WriteLine($"An error occurred: {ex.Message}");
+		// Optionally, you can choose to break out of the loop here
+		break;
+	    }
+	    index = (index + 1) % buckets.Length; //linear probing
+	}
+
 
         buckets[index] = new KeyValuePair<TKey, TValue>(key, value);
         size++;
