@@ -1,12 +1,12 @@
 namespace Lab_4_HashTable;
 public class MyHashTableList<TKey, TValue> : IHashTable<TKey, TValue> {
-    private KeyValuePair<TKey, TValue>?[] buckets; // ? används för att säga att det ej får vara null 
+    private List<KeyValuePair<TKey, TValue>?> buckets;
     private int size;
     private const double LoadFactorThreshold = 0.75;
     private const int InitialCapacity = 10;
 
     public MyHashTableList() {
-        buckets = new KeyValuePair<TKey, TValue>?[InitialCapacity];
+        buckets = new List<KeyValuePair<TKey, TValue>?>(new KeyValuePair<TKey, TValue>?[InitialCapacity]);
         size = 0;
     }
     public void Add(TKey key, TValue value) {
@@ -15,12 +15,11 @@ public class MyHashTableList<TKey, TValue> : IHashTable<TKey, TValue> {
         int attempt = 1;
 
         while (buckets[index] != null && !buckets[index].Value.Key.Equals(key)) {
-            index = (index + attempt * attempt) % buckets.Length; // Quadratic probing
+            index = (index + attempt * attempt) % buckets.Count; // Quadratic probing
             attempt++;
         }
 
-        if (buckets[index] != null && buckets[index].Value.Key.Equals(key))
-        {
+        if (buckets[index] != null && buckets[index].Value.Key.Equals(key)) {
             throw new ArgumentException("An element with the same key already exists.");
         }
 
@@ -31,44 +30,41 @@ public class MyHashTableList<TKey, TValue> : IHashTable<TKey, TValue> {
         int index = GetBucketIndex(key);
         int attempt = 1;
 
-        while (buckets[index] != null)
-        {
-            if (buckets[index].Value.Key.Equals(key))
-            {
+        while (buckets[index] != null) {
+            if (buckets[index].Value.Key.Equals(key)) {
                 return buckets[index].Value.Value;
             }
-            index = (index + attempt * attempt) % buckets.Length; // Quadratic probing
+
+            index = (index + attempt * attempt) % buckets.Count; // Quadratic probing
             attempt++;
         }
 
         throw new KeyNotFoundException("Key not found.");
     }
+
     public void Remove(TKey key) {
         int index = GetBucketIndex(key);
         int attempt = 1;
-
-        while (buckets[index] != null)
-        {
-            if (buckets[index].Value.Key.Equals(key))
-            {
-                buckets[index] = null; 
+        while (buckets[index] != null) {
+            if (buckets[index].Value.Key.Equals(key)) {
+                buckets[index] = null;
                 size--;
                 HandleRehashing(index);
                 return;
             }
-            index = (index + attempt * attempt) % buckets.Length;
+
+            index = (index + attempt * attempt) % buckets.Count;
             attempt++;
         }
 
         throw new KeyNotFoundException("Key not found.");
     }
     private void Resize() {
-        int newCapacity = buckets.Length * 2;
-        var newBuckets = new KeyValuePair<TKey, TValue>?[newCapacity];
-        size = 0; 
+        int newCapacity = buckets.Count * 2;
+        List<KeyValuePair<TKey, TValue>?> newBuckets = new List<KeyValuePair<TKey, TValue>?>(new KeyValuePair<TKey, TValue>?[newCapacity]);
+        size = 0;
 
-        foreach (var bucket in buckets)
-        {
+        foreach (var bucket in buckets) {
             if (bucket != null)
             {
                 Add(bucket.Value.Key, bucket.Value.Value);
@@ -78,24 +74,26 @@ public class MyHashTableList<TKey, TValue> : IHashTable<TKey, TValue> {
         buckets = newBuckets;
     }
     private void EnsureCapacity() {
-        if ((double)size / buckets.Length >= LoadFactorThreshold) {
+        if ((double)size / buckets.Count >= LoadFactorThreshold) {
             Resize();
         }
+        
     }
     private void HandleRehashing(int startIndex) {
-        int index = (startIndex + 1) % buckets.Length;
+        int index = (startIndex + 1) % buckets.Count;
         while (buckets[index] != null) {
             var rehashedKey = buckets[index].Value.Key;
             var rehashedValue = buckets[index].Value.Value;
             buckets[index] = null;
             size--;
             Add(rehashedKey, rehashedValue);
-            index = (index + 1) % buckets.Length;
+            index = (index + 1) % buckets.Count;
         }
     }
     private int GetBucketIndex(TKey key) {
         int hash = key.GetHashCode();
         hash ^= (hash << 13) ^ (hash >> 17);
-        return Math.Abs(hash % buckets.Length);
+        return Math.Abs(hash % buckets.Count);
     }
 }
+
