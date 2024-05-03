@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W8d1LJMkjiVxRhXcL5OMPelN46PiZe/jpqflzriPGW4oS2rZWdLaHU89uEkiXP42HBTR0grUKKR9VVaFV9wV2w==",
+  "dgSpecHash": "3yjXAE4wNMqVuvMGnjVEIrOkKqBx+H7/v1IX/ljRtlwFdOznW1PMlpzYW2bl+7KJUi1yab0tQjSHIhMwigzl/g==",
   "success": true,
-  "projectFilePath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTables/Lab_4_Hashtables.csproj",
+  "projectFilePath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTables/Lab_4_Hashtables.csproj",
   "expectedPackageFiles": [
     "/home/zatanic/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/home/zatanic/.nuget/packages/xunit/2.8.0/xunit.2.8.0.nupkg.sha512",

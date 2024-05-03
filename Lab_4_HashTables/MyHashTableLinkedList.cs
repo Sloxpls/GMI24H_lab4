@@ -1,138 +1,92 @@
-using System;
-using System.Collections.Generic;
+namespace Lab_4_HashTable;
 
-namespace Lab_4_HashTable
-{
-    public class MyHashTableLinkedList : IHashTable
+// <TKey, TValue> används för att göra klassen generisk
+// alltså kan ta emot olika variabel typer
+public class MyHashTableLinkedList<TKey, TValue> : IHashTable<TKey, TValue> {
+    
+    private LinkedList<KeyValuePair<TKey, TValue>>[] buckets;
+    private int size;
+    private const double LoadFactorThreshold = 0.75; // används för rezising
+    private const int InitialCapacity = 10;
+
+    
+    //skappar en linktlist vilkets element är linkt lists
+    // med en initsial kapasitet av 10
+    public MyHashTableLinkedList() {
+        buckets = new LinkedList<KeyValuePair<TKey, TValue>>[InitialCapacity];
+        for (int i = 0; i < InitialCapacity; i++) {
+            buckets[i] = new LinkedList<KeyValuePair<TKey, TValue>>();
+        }
+        size = 0;
+    }
+
+    public void Add(TKey key, TValue value) {
+        if ((double)size / buckets.Length > LoadFactorThreshold)// om listan är mer än 75% full Resize 
+        {
+            Resize();
+        }
+        
+        int index = GetBucketIndex(key);
+        buckets[index].AddLast(new KeyValuePair<TKey, TValue>(key, value)); // lägar alltid till sista noden / ny node i slutet
+        size++;
+    }
+
+    public TValue Get(TKey key) {
+        int index = GetBucketIndex(key);
+        foreach (var pair in buckets[index]) {
+            if (pair.Key.Equals(key)) {
+                return pair.Value;
+            }
+        }
+        throw new KeyNotFoundException("Key not found.");
+    }
+
+    public void Remove(TKey key) {
+        int index = GetBucketIndex(key);
+        foreach (var pair in buckets[index]) {
+            if (pair.Key.Equals(key)) {
+                buckets[index].Remove(pair);
+                size--;
+                return;
+            }
+        }
+        throw new KeyNotFoundException("Key not found.");
+    }
+
+    private void Resize()
     {
-        public MyHashTableLinkedList() : this(100) { }
+        int newCapacity = buckets.Length + 10; // Incremental increase by 10
+        var newBuckets = new List<LinkedList<KeyValuePair<TKey, TValue>>>(newCapacity);
+        for (int i = 0; i < newCapacity; i++)
+        {
+            newBuckets.Add(new LinkedList<KeyValuePair<TKey, TValue>>());
+        }
+
+        foreach (var bucket in buckets)
+        {
+            foreach (var pair in bucket)
+            {
+                int newIndex = GetBucketIndex(pair.Key, newCapacity);
+                newBuckets[newIndex].AddLast(pair);
+            }
+        }
+
+        buckets = newBuckets.ToArray();
+    }
+
+
+
+    // hash funktion, dbj2 
+    private int GetBucketIndex(TKey key, int capacity = -1) {
+        ulong hash = 5381;
         
-        private LinkedList<KeyValuePair<string, Student>>[] buckets;
-        private int capacity;
-        private const float LoadFactorThreshold = 0.8f;
-        private const int IncrementAmount = 10;
-
-        public MyHashTableLinkedList(int size)
-        {
-            buckets = new LinkedList<KeyValuePair<string, Student>>[size];
-            capacity = size;
+        foreach (char c in key.ToString()) {
+            hash = ((hash << 5) + hash) + (ulong)c; 
         }
-
-        public int Count
+        if (capacity == -1)
         {
-            get
-            {
-                int count = 0;
-                foreach (var bucket in buckets)
-                {
-                    if (bucket != null)
-                    {
-                        count += bucket.Count;
-                    }
-                }
-                return count;
-            }
+            capacity = buckets.Length;
         }
-
-        public void Add(string key, Student value)
-        {
-            if ((float)Count / capacity >= LoadFactorThreshold)
-            {
-                ResizeIncremental();
-            }
-
-            int index = GetIndex(key);
-            if (buckets[index] == null)
-                buckets[index] = new LinkedList<KeyValuePair<string, Student>>();
-
-            buckets[index].AddLast(new KeyValuePair<string, Student>(key, value));
-        }
-
-        public Student Get(string key)
-        {
-            int index = GetIndex(key);
-            var bucket = buckets[index];
-
-            if (bucket != null)
-            {
-                foreach (var pair in bucket)
-                {
-                    if (pair.Key == key)
-                        return pair.Value;
-                }
-            }
-            return null;
-        }
-        
-        public void Remove(string key)
-        {
-            int index = GetIndex(key);
-            var bucket = buckets[index];
-
-            if (bucket != null)
-            {
-                var node = bucket.First;
-                while (node != null)
-                {
-                    if (node.Value.Key == key)
-                    {
-                        bucket.Remove(node);
-                        break;
-                    }
-
-                    node = node.Next;
-                }
-            }
-        }
-
-        public IEnumerable<KeyValuePair<string, Student>> GetAllPairs()
-        {
-            foreach (var bucket in buckets)
-            {
-                if (bucket != null)
-                {
-                    foreach (var pair in bucket)
-                    {
-                        yield return pair;
-                    }
-                }
-            }
-        }
-
-        public int GetIndex(string key)
-        {
-            // Implement your own hash function here
-            // For demonstration purposes, a simple mod function is used
-            return Math.Abs(key.GetHashCode()) % buckets.Length;
-        }
-
-        public void Clear()
-        {
-            for (int i = 0; i < buckets.Length; i++)
-            {
-                if (buckets[i] != null)
-                    buckets[i].Clear();
-            }
-        }
-
-        private void ResizeIncremental()
-        {
-            int newCapacity = capacity + IncrementAmount;
-            var newBuckets = new LinkedList<KeyValuePair<string, Student>>[newCapacity];
-
-            foreach (var bucket in buckets.Where(b => b != null))
-            {
-                foreach (var pair in bucket)
-                {
-                    int newIndex = GetIndex(pair.Key);
-                    if (newBuckets[newIndex] == null)
-                        newBuckets[newIndex] = new LinkedList<KeyValuePair<string, Student>>();
-
-                    newBuckets[newIndex].AddLast(pair);
-                }
-            }
-            buckets = newBuckets;
-            capacity = newCapacity;
-        }
+        return (int)(hash % (ulong)capacity);
     }
 }

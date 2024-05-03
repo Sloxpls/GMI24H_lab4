@@ -1120,11 +1120,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTableTests/HashTabletests.csproj",
+      "projectUniqueName": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTableTests/HashTabletests.csproj",
       "projectName": "HashTabletests",
-      "projectPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTableTests/HashTabletests.csproj",
+      "projectPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTableTests/HashTabletests.csproj",
       "packagesPath": "/home/zatanic/.nuget/packages/",
-      "outputPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTableTests/obj/",
+      "outputPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTableTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/zatanic/.nuget/NuGet/NuGet.Config"
@@ -1139,8 +1139,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTables/Lab_4_Hashtables.csproj": {
-              "projectPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTables/Lab_4_Hashtables.csproj"
+            "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTables/Lab_4_Hashtables.csproj": {
+              "projectPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTables/Lab_4_Hashtables.csproj"
             }
           }
         }

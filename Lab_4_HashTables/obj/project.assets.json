@@ -267,11 +267,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTables/Lab_4_Hashtables.csproj",
+      "projectUniqueName": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTables/Lab_4_Hashtables.csproj",
       "projectName": "Lab_4_Hashtables",
-      "projectPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTables/Lab_4_Hashtables.csproj",
+      "projectPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTables/Lab_4_Hashtables.csproj",
       "packagesPath": "/home/zatanic/.nuget/packages/",
-      "outputPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTables/obj/",
+      "outputPath": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTables/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/zatanic/.nuget/NuGet/NuGet.Config"

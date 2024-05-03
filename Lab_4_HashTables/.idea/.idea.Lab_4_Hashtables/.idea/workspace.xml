@@ -8,33 +8,172 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a01858ec-de6a-4dc4-9a0f-9bc55fd8f5e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/HashTableTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/HashTableTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/CoverletSourceRootsMapping_HashTabletests" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/CoverletSourceRootsMapping_HashTabletests" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/HashTabletests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/HashTabletests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/HashTabletests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/HashTabletests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/Lab_4_Hashtables.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/Lab_4_Hashtables.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/bin/Debug/net8.0/Lab_4_Hashtables.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/ref/HashTabletests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/ref/HashTabletests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/refint/HashTabletests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_HashTableTests/obj/Debug/net8.0/refint/HashTabletests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyHashTableArray.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyHashTableArray.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyHashTableLinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyHashTableLinkedList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyHashTableList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyHashTableList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lab_4_Hashtables.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lab_4_Hashtables.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lab_4_Hashtables.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lab_4_Hashtables.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lab_4_Hashtables.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lab_4_Hashtables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lab_4_Hashtables.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/.idea/.idea.HashTabletests.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/.idea/.idea.HashTabletests.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/.idea/.idea.Lab_4_HashTableTests.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/.idea/.idea.Lab_4_HashTableTests.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/HashTabletests.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/CoverletSourceRootsMapping_HashTabletests" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/HashTabletests.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/HashTabletests.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/HashTabletests.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/HashTabletests.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Lab_4_Hashtables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Lab_4_Hashtables.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Lab_4_Hashtables.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Lab_4_Hashtables.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Lab_4_Hashtables.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Microsoft.TestPlatform.CommunicationUtilities.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Microsoft.TestPlatform.CoreUtilities.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Microsoft.TestPlatform.CrossPlatEngine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Microsoft.TestPlatform.PlatformAbstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Microsoft.TestPlatform.Utilities.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Microsoft.VisualStudio.TestPlatform.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/NuGet.Frameworks.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/testhost.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/xunit.abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/xunit.assert.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/xunit.core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/xunit.execution.dotnet.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/xunit.runner.reporters.netcoreapp10.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/xunit.runner.utility.netcoreapp10.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/xunit.runner.visualstudio.testadapter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/bin/Debug/net8.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabl.5A6D73F6.Up2Date" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/HashTabletests.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/ref/HashTabletests.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/Debug/net8.0/refint/HashTabletests.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/HashTabletests.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/HashTabletests.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/HashTabletests.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/rider.project.model.nuget.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTableTests/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/.idea/.idea.Lab_4_Hashtables/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/.idea/.idea.Lab_4_Hashtables/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/.idea/.idea.Lab_4_Hashtables/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/IHashTable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/Lab_4_Hashtables.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/Lab_4_Hashtables.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/MyHashTableArray.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/MyHashTableLinkedList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/MyHashTableList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/Student.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/Lab_4_Hashtables" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/Lab_4_Hashtables.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/Lab_4_Hashtables.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/Lab_4_Hashtables.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/Lab_4_Hashtables.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/xunit.abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/xunit.assert.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/xunit.core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/bin/Debug/net8.0/xunit.execution.dotnet.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Ha.FE6BE226.Up2Date" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/Lab_4_Hashtables.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/apphost" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/ref/Lab_4_Hashtables.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Debug/net8.0/refint/Lab_4_Hashtables.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Lab_4_Hashtables.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Lab_4_Hashtables.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/Lab_4_Hashtables.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/rider.project.model.nuget.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_4_HashTables/obj/rider.project.restore.info" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +181,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../Labb 3/Grupp3_LinkedList_Lab3/LinkedListProject/MainClass.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -53,30 +195,30 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortKey" value="BY_TIME_DESCENDING" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Lab_4_Hashtables.executor": "Debug",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTableTests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Lab_4_Hashtables.executor&quot;: &quot;Debug&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/zatanic/Desktop/Algorithmer/Labb 4/Lab_4_HashTable/Lab_4_HashTableTests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/home/zatanic/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/home/zatanic/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/home/zatanic/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/zatanic/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/home/zatanic/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/home/zatanic/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Lab_4_Hashtables" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -110,6 +252,15 @@
       <workItem from="1714382676101" duration="1830000" />
       <workItem from="1714384509087" duration="3092000" />
       <workItem from="1714387923856" duration="25183000" />
+      <workItem from="1714416704401" duration="647000" />
+      <workItem from="1714553856286" duration="8506000" />
+      <workItem from="1714562680427" duration="12392000" />
+      <workItem from="1714579873640" duration="26728000" />
+      <workItem from="1714640777223" duration="19444000" />
+      <workItem from="1714693765694" duration="931000" />
+      <workItem from="1714726702020" duration="173000" />
+      <workItem from="1714726910101" duration="7379000" />
+      <workItem from="1714735880171" duration="1665000" />
     </task>
     <servers />
   </component>
