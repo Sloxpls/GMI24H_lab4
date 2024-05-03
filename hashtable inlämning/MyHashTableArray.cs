@@ -41,7 +41,7 @@ public class MyHashTableArray<TKey, TValue> : IHashTable<TKey, TValue> {
 
         throw new KeyNotFoundException("Key not found.");
     }
-//radera ett element baserat på nyckel och gör omhashning av efterföljande element
+//radera ett element baserat på nyckel och gör omhashning av efterföljande element 
 // så inget index lämnas tom och den slutar leta
     public void Remove(TKey key) {
         int index = GetBucketIndex(key);

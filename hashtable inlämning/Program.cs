@@ -32,7 +32,7 @@ class Program {
             }
         }
     }
-    // HashTableMenu är en meny för hashtabel operationerna
+    // HashTableMenu är en meny för hashtabel operationerna 
     static void HashTableMenu(IHashTable<string, Student> hashTable) {
         while (true) {
             Console.WriteLine();

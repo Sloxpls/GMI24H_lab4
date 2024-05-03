@@ -47,6 +47,7 @@ namespace Lab_4_HashTable
         public void ArrayChainingCollisionTest()
         {
             // Arrange
+            
             var hashTable = new MyHashTableArray(100);
             var student1 = new Student("h21joste", "Johan Steinholtz");
             var student2 = new Student("h20jisjö", "Jim Sjögren");

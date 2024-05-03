@@ -1,7 +1,7 @@
 ﻿namespace hashtable_inlämning;
 
 public class MyHashTableList<TKey, TValue> : IHashTable<TKey, TValue> {
-    private KeyValuePair<TKey, TValue>?[] buckets; // ? används för att säga att det ej får vara null
+    private KeyValuePair<TKey, TValue>?[] buckets; // ? används för att säga att det ej får vara null 
     private int size;
     private const double LoadFactorThreshold = 0.75;
     private const int InitialCapacity = 10;

@@ -15,4 +15,5 @@ public class Student {
     }
     // och annan info
     // bara lägga in i construkorn
+    
 }

@@ -21,7 +21,7 @@ public class MyHashTableLinkedList<TKey, TValue> : IHashTable<TKey, TValue> {
     }
 
     public void Add(TKey key, TValue value) {
-        if ((double)size / buckets.Length > LoadFactorThreshold)// om listan är mer än 75% full Resize
+        if ((double)size / buckets.Length > LoadFactorThreshold)// om listan är mer än 75% full Resize 
         {
             Resize();
         }
